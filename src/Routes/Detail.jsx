@@ -34,7 +34,7 @@ const Detail = () => {
             <th>Phone</th>
             <th>Website</th>
           </tr>
-          <tr>
+          <tr className='tbl'>
             <td>{dentist.name}</td>
             <td>{dentist.email}</td>
             <td>{dentist.phone}</td>

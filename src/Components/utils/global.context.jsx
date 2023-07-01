@@ -1,6 +1,6 @@
 import { createContext, useEffect, useReducer } from "react";
 
-export const initialState = {mode: "", data: []}
+export const initialState = JSON.parse(localStorage.getItem("mode")) || {mode: "", data: []}
 
 const modeReducer = (state, action) => {
   switch (action.type) {
@@ -38,7 +38,7 @@ const dentistReducer = (state, action) => {
       };
     case "DEL_FAV":
       return {
-        dentistList: state.dentistsList,
+        dentistsList: state.dentistsList,
         favList: state.favList.filter((fav) => fav.id !== action.payload),
         dentist: state.dentist,
       };
@@ -82,6 +82,10 @@ export const ContextProvider = ({ children }) => {
   } else {
     document.body.classList.remove("dark");
   }
+
+  useEffect(() => {
+    localStorage.setItem("mode", JSON.stringify(modeState));
+  }, [modeState]);
 
   return (
     <ContextGlobal.Provider value={{

@@ -13,12 +13,12 @@ const Navbar = () => {
   return (
     <nav>
       <div>
-        <Link to="/"><h4>Home</h4></Link>
-        <Link to="/contact"><h4>Contact</h4></Link>
-        <Link to="/favs"><h4>Favs</h4></Link>
+        <Link to="/"><h4 className='nav-route'>Home</h4></Link>
+        <Link to="/contact"><h4 className='nav-route'>Contact</h4></Link>
+        <Link to="/favs"><h4 className='nav-route'>Favs</h4></Link>
       </div>
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-      <button onClick={toggleMode}>{modeState.darkMode ? "Bright Mode" : "Dark Mode"}</button>
+      <button className='nav-btn' onClick={toggleMode}>{modeState.darkMode ? '☀️' : '🌙'}</button>
     </nav>
   )
 }

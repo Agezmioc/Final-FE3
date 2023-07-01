@@ -15,8 +15,10 @@ code {
   background-color: rgba(136, 136, 136, 0.116);
   padding: 10px;
   border: none;
+  border-radius: 10px;
   width: 100%;
   cursor: pointer;
+  margin-bottom: 0.6rem;
 }
 
 h1{
@@ -25,9 +27,29 @@ h1{
 
 nav{
   display: flex;
-  width: 80vw;
-  justify-content: flex-start;
+  width: 80%;
+  justify-content:space-around;
   padding: 1rem;
+}
+
+nav > div{
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  padding: 0rem, 2rem;
+}
+
+.nav-route{
+  padding-right: 1rem;
+  margin-right: 3rem;
+}
+
+.nav-btn {
+  background-color: #222222;
+  height: 35px;
+  width: 35px;
+  border-radius: 1rem;
+  margin-top: 1.20rem;
 }
 
 a{
@@ -75,9 +97,17 @@ form{
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
+  height: 360px;
   width: 200px;
+  margin: 10px;
   padding: 0.5rem 0.5rem 0 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
+  border-radius: 10px;
+}
+
+.card-text{
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 .card:hover{
@@ -95,17 +125,18 @@ form{
 }
 
 .images {
+  border-radius: 10px;
   width: 200px;
   height: 200px;
 }
 
 table {
- border-collapse: collapse;
+border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
     display: table;
     border: 1px solid #ccc;
-
+    color: black;
 }
 
 td, th {
@@ -118,10 +149,47 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
+.contact {
+  text-align: center;
+}
+
 .dark{
-  background-color: #12121296;
+  background-color: #121212be;
   color: white;
 }
 .dark > a {
   color: white;
+}
+
+.dark .nav-route{
+  color: white;
+}
+
+.dark .nav-route:hover{
+  color: rgb(44, 44, 44);
+}
+
+.dark .card-text-main{
+  color: white;
+}
+
+.dark .card-text-main:hover{
+  color: rgb(44, 44, 44);
+}
+
+.dark .favButton{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.116);
+}
+
+.dark table{
+  color: white;
+}
+
+.dark .tbl{
+  background-color: rgba(201, 201, 201, 0.116);
+}
+
+.dark .nav-btn{
+  background-color: #dddddd;
 }

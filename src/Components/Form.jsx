@@ -28,7 +28,7 @@ const Form = () => {
         <button onClick={handleSubmit}>Send</button>
       </form>
       { showErr && <h6>Por favor verifique su información nuevamente...</h6> }
-      { showOk && <h4>Gracias {name}, te contactaremos cuando antes vía mail.</h4> }
+      { showOk && <h4>Gracias {name}, te contactaremos cuanto antes vía mail.</h4> }
     </div>
   );
 };
